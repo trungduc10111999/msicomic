@@ -1,0 +1,12 @@
+.profile{
+    font-family: Bahnschrift, sans-serif;
+}
+.profile button{
+    margin-left: 170px;
+    padding: 10px;
+}
+.profile input{
+    padding-left: 10px;
+    margin-left: 20px;
+    align: left;
+}

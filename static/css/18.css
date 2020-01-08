@@ -1,0 +1,23 @@
+.card{
+    padding: 20px 20px 0 50px;
+    margin-top: 30px;
+    background: #f5f8fd;
+}
+.card-body{
+    padding: 30px;
+}
+.card .card-body .card_item{
+    margin-bottom: 15px;
+}
+.card .card-body .card_item .card-body-item a{
+    text-decoration: none;
+}
+.card .card-body .card_item .card-body-item a img{
+    margin-left: 70px;
+}
+.card .card-body .card_item .card-body-item a h3{
+    text-align: center;
+}
+.card .card-body .card_item .card-body-item a h6{
+    text-align: center;
+}

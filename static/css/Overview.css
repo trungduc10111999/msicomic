@@ -1,0 +1,24 @@
+/* Box styles */
+.myBox {
+border: none;
+padding: 5px;
+font: 24px/36px sans-serif;
+width: 750px;
+height: 200px;
+overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: #1bb1dc;
+/*box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #7bac10;
+}
