@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Đăng Ký - MSIComic{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card" style="padding: 10px; margin-top: 10px;">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

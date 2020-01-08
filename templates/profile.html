@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Điêu Chỉnh Thông tin{% endblock %}
+
+{% block content %}
+    <p style="padding-left: 1500px;"><a href="{% url 'logout' %}" class="btn btn-danger"><i class="fa fa-sign-out"></i> Log-Out</a></p>
+    <div class="container">
+        <p style="padding-left: 990px; margin-top: -35px;">xin chao <strong>{{ user.username }}</strong></p>
+
+        <div class="card">
+            <div class="card-body">
+                <h2>Thông Tin Cá Nhân</h2>
+                <form method="post" class="profile">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-primary">Update</button>
+
+                    <a href="{% url 'home' %}" style="text-decoration: none; padding: 10px;">Quay lai trang chu</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

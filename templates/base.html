@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <title>{% block title %}MSIComic.com.vn{% endblock %}</title>
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+
+    <link href="{% static 'css/Home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/overview.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet">
+    <link href="{% static 'css/18.css' %}" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #f5f8fd;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <div class="container">
+            <div class="TopBar">
+                <div class="link-page">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> <b style="color: #fff;">|</b>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> <b style="color: #fff;">|</b>
+                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> <b style="color: #fff;">|</b>
+                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <div class="contact">
+                        <i class="fa fa-envelope" style="color: #fff"></i>
+                        <a href="#footer">LIÊN HỆ</a> <b style="color: #fff;">/</b>
+
+                        <i class="fa fa-phone" style="color: #fff" ></i>
+                        <a href="#">0374228916</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo" >
+                <a href="{% url 'home' %}" id="home"><img src="{% static 'img/logoMSI.png' %}" style="width: 150px; height: 100px;"></a>
+                <h1>My soul in comic</h1>
+            </div>
+
+            <ul class="nav">
+                <li><a href="{% url 'home' %}" style="color: #fff;" title="Trang Chủ" class="{% if nav == 'home' %}active{% endif %}"><i class="fa fa-home"></i></a></li>
+	            	<!----- Full Drop Down Name ---->
+		            <li class="dropdown"><a href="#">THỂ LOẠI</a>
+                        <div class="fulldrop">
+                            <div class="column">
+                              <ul>
+                                <li><a href="#">PHIÊU LƯU</a></li>
+                                <li><a href="#">HÀNH ĐỘNG</a></li>
+                                <li><a href="#">KIẾM HIỆP</a></li>
+                                <li><a href="#">NGÔN TÌNH</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="column">
+                              <ul>
+                                <li><a href="#">SHOUNEN</a></li>
+                                <li><a href="#">VIỄN TƯỞNG</a></li>
+                                <li><a href="#">SAMURAI</a></li>
+                                <li><a href="#">XUYÊN KHÔNG</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="column">
+                              <ul>
+                                <li><a href="#">ĐAM MỸ</a></li>
+                                <li><a href="#">CỔ ĐẠI</a></li>
+                                <li><a href="#">THỂ THAO</a></li>
+                                <li><a href="#">HỌC ĐƯỜNG</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="column">
+                              <ul>
+                                <li><a href="#">ẢO THUẬT</a></li>
+                                <li><a href="#">KINH DỊ</a></li>
+                                <li><a href="#">MA</a></li>
+                                <li><a href="#">LỊCH SỬ</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="column">
+                              <ul>
+                                <li><a href="#">ANIME</a></li>
+                                <li><a href="#">ĐỜI SỐNG</a></li>
+                                <li><a href="#">SIÊU NHÂN</a></li>
+                                <li><a href="#">GAME</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="column">
+                              <ul>
+                                <li><a href="#">SHOUJU AI</a></li>
+                                <li><a href="#">LÃNG MẠN</a></li>
+                                <li><a href="#">TRINH THÁM</a></li>
+                                <li><a href="#">HENTAI</a></li>
+                              </ul>
+                            </div>
+                        </div>
+		            </li>
+	                <!----- Full Drop Down Contents  Ends  Here---->
+	                <!----- Full Drop Down Name ---->
+		            <li class="dropdown"><a href="#">TRUYỆN FULL</a>
+		             	<div class="fulldrop">
+			                <div class="column">
+			                  <ul>
+			                    <li><a href="#">PHIÊU LƯU</a></li>
+			                    <li><a href="#">HÀNH ĐỘNG</a></li>
+			                    <li><a href="#">KIẾM HIỆP</a></li>
+			                    <li><a href="#">NGÔN TÌNH</a></li>
+			                  </ul>
+			                </div>
+
+			                <div class="column">
+			                  <ul>
+			                    <li><a href="#">SHOUNEN</a></li>
+			                    <li><a href="#">VIỄN TƯỞNG</a></li>
+			                    <li><a href="#">SAMURAI</a></li>
+			                    <li><a href="#">XUYÊN KHÔNG</a></li>
+			                  </ul>
+			                </div>
+
+			                <div class="column">
+			                  <ul>
+			                    <li><a href="#">ĐAM MỸ</a></li>
+			                    <li><a href="#">CỔ ĐẠI</a></li>
+			                    <li><a href="#">THỂ THAO</a></li>
+			                    <li><a href="#">HỌC ĐƯỜNG</a></li>
+			                  </ul>
+			                </div>
+
+			                <div class="column">
+			                  <ul>
+			                    <li><a href="#">ẢO THUẬT</a></li>
+			                    <li><a href="#">KINH DỊ</a></li>
+			                    <li><a href="#">MA</a></li>
+			                    <li><a href="#">LỊCH SỬ</a></li>
+			                  </ul>
+			                </div>
+
+			                <div class="column">
+			                  <ul>
+			                    <li><a href="#">ANIME</a></li>
+			                    <li><a href="#">ĐỜI SỐNG</a></li>
+			                    <li><a href="#">SIÊU NHÂN</a></li>
+			                    <li><a href="#">GAME</a></li>
+			                  </ul>
+			                </div>
+
+			                <div class="column">
+			                  <ul>
+			                    <li><a href="#">SHOUJU AI</a></li>
+			                    <li><a href="#">LÃNG MẠN</a></li>
+			                    <li><a href="#">TRINH THÁM</a></li>
+			                    <li><a href="#">HENTAI</a></li>
+			                  </ul>
+			                </div>
+		              	</div>
+		            </li>
+	              	<!----- Full Drop Down Contents  Ends  Here---->
+	               	<li><a href="{% url '18+' %}">TRÊN 18+</a></li>
+	              	<li><a href="#">DƯỚI 18-</a></li>
+
+                    {% if not user.is_authenticated %}
+                        <li><a href="{% url 'login' %}" style="color: #fff;" title="Log-In"><i class="fa fa-sign-in"></i> LOG-IN</a></li>
+                    {% else %}
+                        <li><a href="{% url 'profile' %}">HỒ SƠ</a></li>
+                    {% endif %}
+
+		            <li class="search">
+		            	<form action="">
+		                <i class="fa fa-search"></i><input type="text">
+		                </form>
+                    </li>
+                <!----- Search Form Ends ---->
+            </ul>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                          <div class="footer-info">
+                            <a href="{% url 'home' %}" id="home" ><img src="{% static 'img/logoMSI.png' %}" style="width: 150px; height: 100px;" alt=""></a>
+                          </div>
+                          <div class="footer-newsletter">
+                            <p>Chào mừng bạn đến với <strong>MSIComic - Thế Giới Truyện Tranh. MSIComic (MSIComic hay gọi tắt "MSI")</strong> là một nền tảng nội dung số trên internet, nơi thành viên có thể tự do xuất bản những nội dung tiếng Việt như: Hành Động, Phiêu Lưu, Shounen hoặc một số loại truyện khác. Với những chức năng được cải tiến liên tục, <strong>MSIComic</strong> sẽ mang lại cho Tác giả sáng tác truyện, Dịch giả đăng truyện và Người đọc truyện online những trải nghiệm tuyệt vời nhất. Đừng ngại đăng ký tài khoản tại TruyenYY, chỉ mất 30s và hoàn toàn miễn phí.</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="footer-links">
+                            <ul>
+                              <li><a href="">Trang Chủ</a></li>
+                              <li><a href="">Truyện Full</a></li>
+                              <li><a href="">Trên 18+</a></li>
+                              <li><a href="">Dưới 18-</a></li>
+                            </ul>
+                          </div>
+                          <div class="footer-links">
+                            <h4>Liên Hệ Với Chúng Tôi</h4>
+                            <p>
+                              Group 11 <br>
+                              University of science, 227 Nguyen Van Cu<br>
+                              HCM city <br>
+                              <strong>Phone:</strong> 0374228916<br>
+                              <strong>Email:</strong> trungducden@gmail.com<br>
+                            </p>
+                          </div>
+                          <div class="social-links">
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form">
+                      <h4>Gửi Tin Nhắn Cho Chúng Tôi</h4>
+                      <p>Các bạn nhớ điền đầy đủ thông tin. Mọi thông tin đều giúp ích cho chúng tôi để giải quyết vấn đề một các dễ dàng nhất, xin cảm ơn.</p>
+                      <form action="" method="post" role="form" class="contactForm">
+                        <div class="form-group">
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                          <div class="validation"></div>
+                        </div>
+                        <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="errormessage"></div>
+                        <div class="text-center">
+                            {% csrf_token %}
+                            <button type="submit" title="Send Message">Gửi</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+	        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+	        &copy; Copyright <strong>MSIComic</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+	        Designed by <a href="file:///C:/Users/ttduc/OneDrive/Documents/Web/web.html">Group 11</a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+	<!--  main -->
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>
