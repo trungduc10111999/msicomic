@@ -1,2 +1,0 @@
-# django packages
-django-recaptcha
