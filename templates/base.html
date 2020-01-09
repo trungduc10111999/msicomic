@@ -17,7 +17,7 @@
     <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
 
     <link href="{% static 'css/Home.css' %}" rel="stylesheet">
-    <link href="{% static 'css/overview.css' %}" rel="stylesheet">
+    <link href="{% static 'css/Overview.css' %}" rel="stylesheet">
     <link href="{% static 'css/profile.css' %}" rel="stylesheet">
     <link href="{% static 'css/18.css' %}" rel="stylesheet">
 
@@ -172,7 +172,7 @@
 		            </li>
 	              	<!----- Full Drop Down Contents  Ends  Here---->
 	               	<li><a href="{% url '18+' %}">TRÊN 18+</a></li>
-	              	<li><a href="#">DƯỚI 18-</a></li>
+	              	<li><a href="{% url '18-' %}">DƯỚI 18-</a></li>
 
                     {% if not user.is_authenticated %}
                         <li><a href="{% url 'login' %}" style="color: #fff;" title="Log-In"><i class="fa fa-sign-in"></i> LOG-IN</a></li>
@@ -195,7 +195,7 @@
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
 
 <footer id="footer">
-    <div class="footer-top">
+    <div class="footer-top"  style="border-top: 1px solid #666666;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

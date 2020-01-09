@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
 from django.views.generic import TemplateView, FormView, UpdateView
 
-from comic.models import Comic
+
 from profiles.forms import RegisterForm
 
 User = get_user_model()
@@ -43,15 +43,6 @@ class SiteRegisterOk(TemplateView):
 
 class SiteLogOut(LogoutView):
     template_name = 'logout.html'
-
-
-def SiteOverView(request):
-    object_view = Comic.objects.filter(name__in=['Dragon Ball'])
-
-    return render(request, 'OverView.html', {
-        'object_view': object_view,
-        'nav': 'OverView'
-    })
 
 
 class ProfileEditView(LoginRequiredMixin, UpdateView):

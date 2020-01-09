@@ -2,6 +2,7 @@
 
 {% block content %}
     <main id="content-main">
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -13,9 +14,9 @@
                                     <div class="mem-info-content">
                                         <h4>{{ items.name }}</h4>
                                         <span>{{ items.types }}</span>
-                                            <div class="xem">
-                                                <a href="{% url 'OverView' %}"><i class="fa fa-angle-double-right"></i></a>
-                                            </div>
+                                        <div class="xem">
+                                            <a href="{% url 'OverView' items.id %}"><i class="fa fa-angle-double-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +69,7 @@
                                         <h4>{{ items.name }}</h4>
                                         <span>{{ items.types }}</span>
                                         <div class="xem">
-                                            <a href=""><i class="fa fa-angle-double-right"></i></a>
+                                            <a href="{% url 'OverView' items.id %}"><i class="fa fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +95,7 @@
                                                     <h4>{{ items.name }}</h4>
                                                     <span>{{ items.types }}</span>
                                                     <div class="xem">
-                                                        <a href=""><i class="fa fa-angle-double-right"></i></a>
+                                                        <a href="{% url 'OverView' items.id %}"><i class="fa fa-angle-double-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -104,14 +105,14 @@
                             </li>
                             {% for items in itemUpdate %}
                                 <li class="media mt-3">
-                                    <a href=""><img src="{{ items.picture.url }}"
+                                    <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}"
                                                     style="width: 100px; height: 135px; border-radius: 10px;"
                                                     class="mr-3" alt="..."></a>
                                     <div class="media-body">
-                                        <a href=""><h5
+                                        <a href="{% url 'OverView' items.id %}"><h5
                                                 style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h5></a>
                                         <a href=""><h6>{{ items.types }}</h6></a>
-                                        <h6 align="left" style="width: 170px;">{{ items.excerpt }}</h6>
+                                        <h6 align="left" style="width: 170px;">{{ items.excerpt | truncatechars:110  }}</h6>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -128,15 +129,15 @@
                                 <div class="col-md-6">
                                     {% for items in list_comic %}
                                         <div class="d-flex align-items-center my-3" id="temp1">
-                                            <a href=""><img class="img mr-3" src="{{ items.picture.url }}" width="100"
+                                            <a href="{% url 'OverView' items.id %}"><img class="img mr-3" src="{{ items.picture.url }}" width="100"
                                                             height="135" style="border-radius: 10px;" alt=""></a>
                                             <div class="lh-90">
-                                                <a href=""><h4 class="mb-0"
+                                                <a href="{% url 'OverView' items.id %}"><h4 class="mb-0"
                                                                style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h4>
                                                 </a>
                                                 <a href=""><small class="ml-0">{{ items.types }}</small></a>
                                                 <h6 align="left"><small
-                                                        style="font-weight: 500;">{{ items.excerpt }}</small></h6>
+                                                        style="font-weight: 500;">{{ items.excerpt | truncatechars:110 }}</small></h6>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -144,15 +145,15 @@
                                 <div class="col-md-6">
                                     {% for items in list_comic2 %}
                                         <div class="d-flex align-items-center my-3" id="temp1">
-                                            <a href=""><img class="img mr-3" src="{{ items.picture.url }}" width="100"
+                                            <a href="{% url 'OverView' items.id %}"><img class="img mr-3" src="{{ items.picture.url }}" width="100"
                                                             height="135" style="border-radius: 10px;"></a>
                                             <div class="lh-90">
-                                                <a href=""><h4 class="mb-0"
+                                                <a href="{% url 'OverView' items.id %}"><h4 class="mb-0"
                                                                style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h4>
                                                 </a>
                                                 <a href=""><small class="ml-0">{{ items.types }}</small></a>
                                                 <h6 align="left"><small
-                                                        style="font-weight: 500;">{{ items.excerpt }}</small></h6>
+                                                        style="font-weight: 500;">{{ items.excerpt | truncatechars:110 }}</small></h6>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -182,7 +183,7 @@
                                                     <h4>{{ items.name }}</h4>
                                                     <span>{{ items.types }}</span>
                                                     <div class="xem">
-                                                        <a href=""><i class="fa fa-angle-double-right"></i></a>
+                                                        <a href="{% url 'OverView' items.id %}"><i class="fa fa-angle-double-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -193,13 +194,12 @@
 
                             {% for items in listTop %}
                                 <li class="media">
-                                    <img src="{{ items.picture.url }}" style="width: 100px; height: 135px;" class="mr-3"
-                                         alt="...">
+                                    <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" style="width: 100px; height: 135px;" class="mr-3"
+                                         alt="..."></a>
                                     <div class="media-body">
-                                        <a href=""><h5
-                                                style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h5></a>
+                                        <a href="{% url 'OverView' items.id %}"><h5 style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h5></a>
                                         <a href=""><h6>{{ items.types }}</h6></a>
-                                        <h6 align="left" style="width: 170px;">{{ items.excerpt }}</h6>
+                                        <h6 align="left" style="width: 170px;">{{ items.excerpt | truncatechars:110 }}</h6>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -213,15 +213,15 @@
                                 <div class="col-md-6">
                                     {% for items in list_full_1 %}
                                         <div class="d-flex align-items-center my-3 text" id="temp1">
-                                            <a href=""><img class="img mr-3" src="{{ items.picture.url }}" alt=""
+                                            <a href="{% url 'OverView' items.id %}"><img class="img mr-3" src="{{ items.picture.url }}" alt=""
                                                             width="100" height="135"></a>
                                             <div class="lh-90">
-                                                <a href=""><h4 class="mb-0"
+                                                <a href="{% url 'OverView' items.id %}"><h4 class="mb-0"
                                                                style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h4>
                                                 </a>
                                                 <a href=""><small class="ml-0">{{ items.types }}</small></a>
                                                 <h6 align="left"><small
-                                                        style="font-weight: 500;">{{ items.excerpt }}</small></h6>
+                                                        style="font-weight: 500;">{{ items.excerpt | truncatechars:110 }}</small></h6>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -229,15 +229,15 @@
                                 <div class="col-md-6">
                                     {% for items in list_full_2 %}
                                         <div class="d-flex align-items-center my-3 text" id="temp1">
-                                            <a href=""><img class="img mr-3" src="{{ items.picture.url }}" alt=""
+                                            <a href="{% url 'OverView' items.id %}"><img class="img mr-3" src="{{ items.picture.url }}" alt=""
                                                             width="100" height="135"></a>
                                             <div class="lh-90">
-                                                <a href=""><h4 class="mb-0"
+                                                <a href="{% url 'OverView' items.id %}"><h4 class="mb-0"
                                                                style="font-family: Bahnschrift,sans-serif;">{{ items.name }}</h4>
                                                 </a>
                                                 <a href=""><small class="ml-0">{{ items.types }}</small></a>
                                                 <h6 align="left"><small
-                                                        style="font-weight: 500;">{{ items.excerpt }}</small></h6>
+                                                        style="font-weight: 500;">{{ items.excerpt | truncatechars:110 }}</small></h6>
                                             </div>
                                         </div>
                                     {% endfor %}

@@ -22,3 +22,27 @@ background: #1bb1dc;
 ::-webkit-scrollbar-thumb:hover {
 background: #7bac10;
 }
+table{
+    margin-top: 20px;
+    width: 80%;
+    font-size: 12pt;
+}
+table th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    opacity: 0.95;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: #666666;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #f5f8fd;
+}
+tr:nth-child(odd){
+    background-color: #dce1ec;
+}

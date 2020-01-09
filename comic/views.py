@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from comic.models import Comic
+from comic.models import Comic, TableChap
 
 
 def Home_view(request):
@@ -57,4 +57,33 @@ def up18_view(request):
         'nav': '18+'
     })
 
-def 
+
+def Under18_view(request):
+    list_comic_18tru = Comic.objects.filter(name__in=['Ô Long Viện', 'Yugi-Oh', 'Black Clover'])
+    list_comic_18tru2 = Comic.objects.filter(name__in=['Ô Long Viện', 'Yugi-Oh', 'Black Clover'])
+    list_comic_18tru3 = Comic.objects.filter(name__in=['Ô Long Viện', 'Yugi-Oh', 'Black Clover'])
+    return render(request, '18-.html', {
+        'list_comic_18tru': list_comic_18tru,
+        'list_comic_18tru2': list_comic_18tru2,
+        'list_comic_18tru3': list_comic_18tru3,
+
+        'nav': '18-'
+    })
+
+
+def Detail_comic(request, comic_id):
+    detail = Comic.objects.get(pk=comic_id)
+    return render(request, 'OverView.html', {
+        'detail': detail,
+
+        'nav': 'OverView'
+    })
+
+
+def view_comic(request, tableChap_id):
+    ViewComic = TableChap.objects.get(pk=tableChap_id)
+    return render(request, 'view.html', {
+        'ViewComic': ViewComic,
+
+        'nav': 'view'
+    })

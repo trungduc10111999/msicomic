@@ -74,9 +74,9 @@ HEADER
     font-weight: 500;
     font-size: 13px;
     line-height: 14px;
-    position: relative;
+    position: fixed;
     padding: 0 0 0 4px;
-    margin: 92px 0px 0px 200px;
+    margin: 92px 0 0 200px;
     background-color: #282521;
     width: 910px;
     height: 50px;

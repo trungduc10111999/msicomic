@@ -4,21 +4,44 @@
 
 {% block content %}
     <div class="container">
-        <div class="row" id="overview">
-            {% for items in object_view %}
-                <div class="col-md-2" id="car">
-                    <img src="{{ items.picture.url }}"
-                         style="width: 200px; height: 280px; margin-top: -5rem; border-radius: 10px;">
-
-                </div>
-                <div class="col-md-10" id="content-car">
-
-                    <h2>{{ items.name }}</h2>
-                    <h6>Tác Giả: {{ items.author }}</h6>
-                    <h6>Thể Loại: {{ items.types }}</h6>
-                    <h6>{{ items.description }}</h6>
-                </div>
-            {% endfor %}
+        <div class="card" style="padding: 10px;">
+            <div class="card-body" style="padding: 10px">
+                {% if detail %}
+                    {% for items in detail.detailcomic_set.all %}
+                        <div class="media" style="float: left;padding-right: 20px;"><img src="{{ items.avatar.url }}" width="250" height="250">
+                        </div>
+                        <div class="media-body">
+                            <h3>{{ items.name }}</h3>
+                            <h5>{{ items.author }}</h5>
+                            <h5>{{ items.types }}</h5>
+                            <div class="myBox">
+                                <h6>{{ items.description }}</h6>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <table align="center">
+                    <tr>
+                        <td colspan="4"><h4>Chapter</h4></td>
+                    </tr>
+                    <tr>
+                        <th>Thu Tu</th>
+                        <th>Tap</th>
+                        <th>Ngay Phat Hanh</th>
+                        <th>Luot Xem</th>
+                    </tr>
+                    <tr>
+                        {% if detail %}
+                            {% for items in detail.tablechap_set.all %}
+                                <td>{{ items.stt }}</td>
+                                <td><a href="{% url 'view' items.id %}">Chapter {{ items.chapSo }}</a></td>
+                                <td>{{ items.date }}</td>
+                                <td>10000</td>
+                            {% endfor %}
+                        {% endif %}
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -6,13 +6,16 @@ from django.conf.urls.static import static
 from comic import views
 from profiles import views as profiles_views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', views.Home_view, name='home'),
-    path('OverView/', profiles_views.SiteOverView, name='OverView'),
+    path('OverView/<int:comic_id>/', views.Detail_comic, name='OverView'),
+    path('view/<int:tableChap_id>/', views.view_comic, name='view'),
+
+
     path('18+/', views.up18_view, name='18+'),
+    path('18-/', views.Under18_view, name='18-'),
 
     path('accounts/', include('django.contrib.auth.urls')),
 
