@@ -10,7 +10,7 @@
                     {% for items in list_comic_18cong %}
                         <div class="card_item">
                             <div class="card-body-item">
-                                <a href=""><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
                                 <div class="content-card">
                                     <a href=""><h3>{{ items.name }}</h3></a>
                                     <a href=""><h6>{{ items.types }}</h6></a>
@@ -23,7 +23,7 @@
                     {% for items in list_comic_18cong2 %}
                         <div class="card_item">
                             <div class="card-body-item">
-                                <a href=""><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
                                 <div class="content-card">
                                     <a href=""><h3>{{ items.name }}</h3></a>
                                     <a href=""><h6>{{ items.types }}</h6></a>
@@ -36,7 +36,7 @@
                     {% for items in list_comic_18cong3 %}
                         <div class="card_item">
                             <div class="card-body-item">
-                                <a href=""><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
                                 <div class="content-card">
                                     <a href=""><h3>{{ items.name }}</h3></a>
                                     <a href=""><h6>{{ items.types }}</h6></a>

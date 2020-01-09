@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Phiêu Lưu - MSIComic{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    {% for items in full1 %}
+                        <div class="card_item">
+                            <div class="card-body-item">
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <div class="content-card">
+                                    <a href="{% url 'OverView' items.id %}"><h3>{{ items.name }}</h3></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-4">
+                    {% for items in full2 %}
+                        <div class="card_item">
+                            <div class="card-body-item">
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <div class="content-card">
+                                    <a href="{% url 'OverView' items.id %}"><h3>{{ items.name }}</h3></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-4">
+                    {% for items in full3 %}
+                        <div class="card_item">
+                            <div class="card-body-item">
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <div class="content-card">
+                                    <a href="{% url 'OverView' items.id %}"><h3>{{ items.name }}</h3></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

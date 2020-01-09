@@ -8,12 +8,14 @@
             <div class="card-body" style="padding: 10px">
                 {% if detail %}
                     {% for items in detail.detailcomic_set.all %}
-                        <div class="media" style="float: left;padding-right: 20px;"><img src="{{ items.avatar.url }}" width="250" height="250">
+                        <div class="media" style="float: left;padding-right: 20px;"><img src="{{ items.avatar.url }}"
+                                                                                         width="250" height="300">
                         </div>
                         <div class="media-body">
                             <h3>{{ items.name }}</h3>
-                            <h5>{{ items.author }}</h5>
-                            <h5>{{ items.types }}</h5>
+                            <h5>Tác Giả: {{ items.author }}</h5>
+                            <h5>Thể Loại: <a href="{% if items.types == 'Phiêu Lưu' %}{% url 'phieuluu' %}{% endif %}">{{ items.types }}</a></h5>
+                            <h5>Tình Trạng: Đang cập nhật</h5>
                             <div class="myBox">
                                 <h6>{{ items.description }}</h6>
                             </div>
@@ -30,16 +32,19 @@
                         <th>Ngay Phat Hanh</th>
                         <th>Luot Xem</th>
                     </tr>
-                    <tr>
-                        {% if detail %}
-                            {% for items in detail.tablechap_set.all %}
+
+                    {% if detail %}
+                        {% for items in detail.tablechap_set.all %}
+                            <tr>
                                 <td>{{ items.stt }}</td>
                                 <td><a href="{% url 'view' items.id %}">Chapter {{ items.chapSo }}</a></td>
                                 <td>{{ items.date }}</td>
-                                <td>10000</td>
-                            {% endfor %}
-                        {% endif %}
-                    </tr>
+                                <td>100</td>
+                                '
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+
                 </table>
             </div>
         </div>

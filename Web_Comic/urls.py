@@ -12,6 +12,8 @@ urlpatterns = [
     path('', views.Home_view, name='home'),
     path('OverView/<int:comic_id>/', views.Detail_comic, name='OverView'),
     path('view/<int:tableChap_id>/', views.view_comic, name='view'),
+    path('phieuluu/', views.PhieuLuuView, name='phieuluu'),
+    path('phieuluufull/', views.PhieuLuuFullView, name='phieuluufull'),
 
 
     path('18+/', views.up18_view, name='18+'),

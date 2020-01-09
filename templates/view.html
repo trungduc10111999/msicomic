@@ -5,7 +5,7 @@
     {% if ViewComic %}
         {% for items in ViewComic.viewcomic_set.all %}
             <div class="container" style="margin-top: 50px;">
-                <p style="text-align: center;"><img src="{{ items.anhChap.url }}" ></p>
+                <p style="text-align: center;"><img src="{{ items.anhChap.url }}" style="width: 700px;"></p>
             </div>
         {% endfor %}
     {% endif %}

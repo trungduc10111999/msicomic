@@ -74,7 +74,7 @@ HEADER
     font-weight: 500;
     font-size: 13px;
     line-height: 14px;
-    position: fixed;
+    position: relative;
     padding: 0 0 0 4px;
     margin: 92px 0 0 200px;
     background-color: #282521;
@@ -104,6 +104,7 @@ HEADER
 
 .nav > li:hover {
     background-color: #666666;
+    transition: 0.5s;
 }
 
 .nav > li > ul {
@@ -124,6 +125,7 @@ HEADER
     opacity: 1;
     visibility: visible;
     margin-top: 0px;
+    transition: 0.5s;
 }
 
 .nav li > ul li {
@@ -148,6 +150,7 @@ HEADER
     padding: 0;
     z-index: 99;
     overflow: hidden;
+    transition: 0.8s;
 }
 
 .nav > li:hover .fulldrop {

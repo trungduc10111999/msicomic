@@ -10,9 +10,9 @@
                     {% for items in list_comic_18tru %}
                         <div class="card_item">
                             <div class="card-body-item">
-                                <a href=""><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
                                 <div class="content-card">
-                                    <a href=""><h3>{{ items.name }}</h3></a>
+                                    <a href="{% url 'OverView' items.id %}"><h3>{{ items.name }}</h3></a>
                                     <a href=""><h6>{{ items.types }}</h6></a>
                                 </div>
                             </div>
@@ -23,9 +23,9 @@
                     {% for items in list_comic_18tru2 %}
                         <div class="card_item">
                             <div class="card-body-item">
-                                <a href=""><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
                                 <div class="content-card">
-                                    <a href=""><h3>{{ items.name }}</h3></a>
+                                    <a href="{% url 'OverView' items.id %}"><h3>{{ items.name }}</h3></a>
                                     <a href=""><h6>{{ items.types }}</h6></a>
                                 </div>
                             </div>
@@ -36,9 +36,9 @@
                     {% for items in list_comic_18tru3 %}
                         <div class="card_item">
                             <div class="card-body-item">
-                                <a href=""><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
+                                <a href="{% url 'OverView' items.id %}"><img src="{{ items.picture.url }}" width="170" height="235" style="border-radius: 10px;" alt=""></a>
                                 <div class="content-card">
-                                    <a href=""><h3>{{ items.name }}</h3></a>
+                                    <a href="{% url 'OverView' items.id %}"><h3>{{ items.name }}</h3></a>
                                     <a href=""><h6>{{ items.types }}</h6></a>
                                 </div>
                             </div>
